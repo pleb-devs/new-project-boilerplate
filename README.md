@@ -15,7 +15,7 @@ new-project-boilerplate provides a systematic methodology for starting projects 
 
 ## Quick Start
 
-1. **Follow the Setup Guide**: Start with [`docs/setup.md`](docs/setup.md) for the complete walkthrough
+1. **Follow the Setup Guide**: Start with [`llm/setup.md`](llm/setup.md) for the complete walkthrough
 2. **Define Your Project**: Create a detailed project overview using the example template
 3. **Build Documentation**: Generate user flows, tech stack, design rules, and project conventions
 4. **Plan Development**: Outline iterative development phases from setup to MVP
@@ -24,7 +24,7 @@ new-project-boilerplate provides a systematic methodology for starting projects 
 ## Documentation Structure
 
 ```
-docs/
+llm/
 ├── setup.md                  # Complete setup walkthrough
 ├── project-overview-example.md # Template for project definition
 ├── project-overview.md       # Your project definition
@@ -48,4 +48,4 @@ docs/
 
 ## Getting Started
 
-Begin by following the setup guide in [`docs/setup.md`](docs/setup.md) to establish your project foundation and development workflow.
+Begin by following the setup guide in [`llm/setup.md`](llm/setup.md) to establish your project foundation and development workflow.
