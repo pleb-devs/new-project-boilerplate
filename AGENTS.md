@@ -1,24 +1,22 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-Treat `llm/` as the single source of truth before writing code. Maintain current context in `llm/project-overview.md`, `llm/project-rules.md`, and `llm/phases/` so future contributors and agents stay aligned. When implementation begins, keep runtime logic in `src/`, mirror specs under `tests/`, and place reusable assets in `public/` or `llm/assets/`. Each file should include a brief purpose note at the top, stay under 500 lines, and live inside a feature folder such as `src/auth/` or `src/dashboard/`.
+Treat `llm/` as the source of truth; keep `llm/project-overview.md`, `llm/project-rules.md`, and `llm/phases/` current before touching code. Runtime logic lives under `src/` with feature folders such as `src/auth/` or `src/dashboard/`; mirror that hierarchy in `tests/` (e.g., `tests/auth/login.test.ts`). Shared assets live in `public/` or `llm/assets/`. Begin every file with a one-line purpose note, cap it at 500 lines, and use descriptive kebab-case filenames like `src/editor/note-toolbar.tsx`.
 
 ## Build, Test, and Development Commands
-Standardize on Node 20+. After initializing `package.json`, add and rely on the following scripts:
-- `npm run dev` — launch the local app with hot reload.
-- `npm run build` — create the production bundle and surface type errors.
-- `npm run lint` — run ESLint/Prettier checks; use `npm run lint -- --fix` before committing.
-- `npm run test` — execute the automated suite; add flags like `--coverage` when auditing metrics.
-Document any extras (storybook, database seeds) in `llm/project-rules.md`.
+Standardize on Node 20+. After `npm install`, rely on scripts: `npm run dev` for hot-reload development, `npm run build` for the production bundle and type checks, `npm run lint` or `npm run lint -- --fix` for formatting, and `npm run test` / `npm run test -- --coverage` for automated suites. Document extra tooling in `llm/project-rules.md` so future agents inherit the workflow.
 
 ## Coding Style & Naming Conventions
-Write TypeScript with 2-space indentation, trailing commas, and single quotes. Prefer pure functions (`function handleSubmit() {}`) over classes, and choose descriptive camelCase variables. Exported symbols need concise block comments, and shared helpers belong in `src/lib/`. Use kebab-case filenames (`user-profile.tsx`) and keep conditionals lean with early returns.
+Use TypeScript with 2-space indentation, single quotes, and trailing commas. Prefer pure functions declared with the `function` keyword, avoid classes and enums, and keep conditionals lean with early returns. Exported symbols need concise block comments; shared utilities belong in `src/lib/`. Use camelCase for variables (`isLoading`, `hasError`) and keep files in kebab-case inside the feature folder.
 
 ## Testing Guidelines
-Default to Vitest + Testing Library unless `llm/tech-stack.md` says otherwise. Structure tests to mirror `src/` (for example, `tests/auth/login.test.ts`). Require at least 80% branch coverage and run `npm run test -- --coverage` before merging. Capture the rationale for new or adjusted tests in the relevant document under `llm/phases/`.
+Default to Vitest + Testing Library. Name suites to mirror `src/`, such as `tests/dashboard/filters.test.ts`. Target at least 80% branch coverage; run `npm run test -- --coverage` before merges and record deltas in the relevant `llm/phases/` doc. Stub Nostr relay traffic in fixtures so tests stay deterministic and fast.
 
 ## Commit & Pull Request Guidelines
-Write short, imperative commit subjects (≤ 60 characters) such as `Add setup guide` or `Update README.md`. Group related changes per commit, note doc updates alongside code, and avoid drive-by edits. Pull requests must include a concise summary, linked issues or docs, verification steps (commands run), and screenshots or terminal snippets for UX changes. Re-run build, lint, and tests after rebasing to confirm nothing regressed.
+Write imperative commit subjects ≤60 characters (`Add setup guide`). Keep related changes together and commit documentation alongside code. PRs need a summary, linked issues or docs, verification commands, and screenshots or logs for UX changes. After rebasing, rerun build, lint, and coverage suites; flag any skipped step with rationale.
 
-## Agent & AI Collaboration
-Share recent docs, open questions, and decision logs when prompting assistants. Record agent-driven decisions in the matching `llm/` doc to keep humans in the loop. When agents modify code, ensure accompanying documentation lands in the same change set to prevent drift between implementation and guidance.
+## Security & Configuration Tips
+Store secrets (API keys, relay credentials) in `.env.local`; never commit them. List required env vars in `README.md`. Validate relay URLs and sanitize note payloads before persistence. Review dependency bumps with `npm audit` prior to shipping.
+
+## Agent & Collaboration Notes
+Review the latest `llm/` docs before generating code and capture new decisions immediately. Cross-check open questions in `llm/phases/` before acting. When agents change code, update the affected planning doc in the same change set and log follow-up tasks in `llm/phases/`. Ask clarifying questions instead of guessing.

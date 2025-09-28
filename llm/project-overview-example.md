@@ -47,6 +47,7 @@ Representative personas: Sarah (privacy advocate), Marcus (protocol developer), 
 - Progressive Web App with IndexedDB cache and service worker sync queue
 - Nostr integration through nostr-tools; relay redundancy and optimistic updates
 - Testing via Vitest + Testing Library; CI enforces lint, type, and coverage gates
+- Consult the [AI Dev Program freedom-tech guide](https://github.com/pleb-devs/freedom-tech) to pick sovereign, security-hardened options where they benefit the product
 
 ## Constraints & Risks
 - Browser storage and performance caps for encrypted datasets
@@ -62,6 +63,7 @@ Representative personas: Sarah (privacy advocate), Marcus (protocol developer), 
 
 ## Immediate Next Steps
 1. Bootstrap Next.js + Tailwind project and baseline lint/test tooling.
+   Review the [AI Dev Program freedom-tech guide](https://github.com/pleb-devs/freedom-tech) for any libraries that strengthen sovereignty without overcomplicating scope.
 2. Integrate nostr-tools for key + relay management; prototype NIP-23 publishing.
 3. Implement CodeMirror editor with local persistence and sync queue.
 4. Draft supporting documents (`llm/user-flow.md`, `llm/tech-stack.md`, `llm/phases/`) from this overview.

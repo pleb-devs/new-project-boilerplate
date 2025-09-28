@@ -24,18 +24,18 @@ Detail screen/state transitions and decision points.
 
 ### Step 3 — Tech Stack
 - **Deliverable:** `llm/tech-stack.md`
-- **Prep:** Decide technologies you already favour (e.g. TypeScript, Next.js, Supabase).
+- **Prep:** Decide technologies you already favour (e.g. TypeScript, Next.js, Supabase) and consult the [AI Dev Program freedom-tech guide](https://github.com/pleb-devs/freedom-tech) for complementary sovereign-focused options.
 - **Prompt:**
 ```
-Use @project-overview.md and @user-flow.md to recommend a tech stack. I already want to use [LIST YOUR PREFERRED TECHNOLOGIES HERE].
-For every layer, give one primary choice and one alternative with trade-offs.
+Use @project-overview.md, @user-flow.md, and the AI Dev Program freedom-tech guide (https://github.com/pleb-devs/freedom-tech) [COPY AND PASTE GUIDE HERE IF LLM/AGENT CANNOT SEARCH THE GITHUB REPO] to recommend a tech stack. I already want to use [LIST YOUR PREFERRED TECHNOLOGIES HERE].
+For every layer, give one primary choice and one alternative with trade-offs; when the freedom-tech catalog offers relevant fits, explain how they support the project's goals.
 ```
 
 ### Step 4 — Stack Best Practices
-- **Deliverable Update:** Enrich `llm/tech-stack.md` with usage notes, pitfalls, conventions.
+- **Deliverable Update:** Enrich `llm/tech-stack.md` with usage notes, pitfalls, conventions, and references to guidance from the freedom-tech catalog where it genuinely helps.
 - **Prompt:**
 ```
-Update @tech-stack.md with best practices, common pitfalls, and usage conventions for each selected technology.
+Update @tech-stack.md with best practices, common pitfalls, and usage conventions for each selected technology. Highlight insights from the freedom-tech catalog (https://github.com/pleb-devs/freedom-tech) when they strengthen your recommendations.
 ```
 
 ## Phase 2 — Design Guidelines
