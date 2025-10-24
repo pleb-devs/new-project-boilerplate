@@ -1,6 +1,8 @@
+Purpose: Example template to copy to llm/project/project-overview.md and customize.
+
 # Project Overview Example
 
-> Use this as a model for your own overview, then store your customized version at `llm/project-overview.md`.
+> How to use: Copy this file to `llm/project/project-overview.md`, then tailor it. Keep it under 500 lines and start with a one-line purpose note.
 
 ## Snapshot
 - **Project:** NostrNotes — encrypted markdown notes on the Nostr network
@@ -66,4 +68,8 @@ Representative personas: Sarah (privacy advocate), Marcus (protocol developer), 
    Review the [AI Dev Program freedom-tech guide](https://github.com/pleb-devs/freedom-tech) for any libraries that strengthen sovereignty without overcomplicating scope.
 2. Integrate nostr-tools for key + relay management; prototype NIP-23 publishing.
 3. Implement CodeMirror editor with local persistence and sync queue.
-4. Draft supporting documents (`llm/user-flow.md`, `llm/tech-stack.md`, `llm/phases/`) from this overview.
+4. Create supporting docs from this overview:
+   - `llm/project/user-flow.md`
+   - `llm/project/tech-stack.md`
+   - `llm/project/phases/`
+5. Optional: add any focused references under `llm/context/` (e.g., `nostr-nip-01.md`).
