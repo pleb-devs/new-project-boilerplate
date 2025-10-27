@@ -106,7 +106,7 @@ Place the files in `llm/project/phases/`.
 ## Phase 5 — Development Enablement
 
 ### Step 9 — Agent Rules
-- **Deliverable:** Copy into Cursor User Rules or team handbook.
+- **Deliverable:** Copy into Cursor User Rules, Goosehints hintsets, `AGENTS.md`, `CLAUDE.md`, and any other shared agent-rules handbook.
 - **Why:** Keep every assistant aligned with the engineering expectations.
 - **Paste:**
 ```
@@ -131,7 +131,7 @@ Code Style and Structure:
 - Keep conditionals lean; avoid redundant braces.
 ```
 
-Note: Also see `AGENTS.md` at the repo root for shared standards.
+Note: Also see `AGENTS.md` at the repo root, `CLAUDE.md` for Anthropic workflows, and the Goosehints guide (https://block.github.io/goose/docs/guides/using-goosehints/) when syncing assistant rule repositories.
 
 ### Step 10 — README Refresh
 - **Deliverable:** Updated project README.
