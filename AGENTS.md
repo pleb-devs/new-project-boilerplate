@@ -1,22 +1,39 @@
 # Repository Guidelines
 
 ## Project Structure & Module Organization
-Treat `llm/` as the source of truth. Keep `llm/project/project-overview.md`, `llm/project/project-rules.md`, and `llm/project/phases/` current before touching code. Use `llm/context/` for focused implementation references (e.g., protocol notes) and `llm/workflows/` for repeatable runbooks (e.g., local dev setup). Runtime logic lives under `src/` with feature folders such as `src/auth/` or `src/dashboard/`; mirror that hierarchy in `tests/` (e.g., `tests/auth/login.test.ts`). Shared assets live in `public/` or `llm/assets/`. Begin every file with a one-line purpose note, cap it at 500 lines, and use descriptive kebab-case filenames like `src/editor/note-toolbar.tsx`.
+- `README.md` describes the boilerplate purpose and how to start.
+- `llm/` is the source of truth for documentation-first planning:
+  - `llm/project/` holds the canonical project definition, rules, and phased plans.
+  - `llm/context/` stores focused reference notes (specs, models, usage patterns).
+  - `llm/workflows/` contains repeatable runbooks (e.g., local dev setup).
+- `LICENSE` defines licensing terms.
 
 ## Build, Test, and Development Commands
-Standardize on Node 20+. After `npm install`, rely on scripts: `npm run dev` for hot-reload development, `npm run build` for the production bundle and type checks, `npm run lint` or `npm run lint -- --fix` for formatting, and `npm run test` / `npm run test -- --coverage` for automated suites. Document extra tooling in `llm/project/project-rules.md` so future agents inherit the workflow. See `llm/workflows/` for common runbooks.
+This repo is documentation-first; it does not ship runnable code by default. The standard commands you should mirror in downstream projects are documented in `llm/workflows/dev-env-local.md`:
+- `npm install` — install dependencies.
+- `npm run dev` — start the local dev server with hot reload.
+- `npm run lint` — lint (use `-- --fix` to auto-fix).
+- `npm run build` — type check and build for production.
+- `npm run test` — run tests (optionally with `-- --coverage`).
 
 ## Coding Style & Naming Conventions
-Use TypeScript with 2-space indentation, single quotes, and trailing commas. Prefer pure functions declared with the `function` keyword, avoid classes and enums, and keep conditionals lean with early returns. Exported symbols need concise block comments; shared utilities belong in `src/lib/`. Use camelCase for variables (`isLoading`, `hasError`) and keep files in kebab-case inside the feature folder.
+- Use kebab-case for doc filenames (e.g., `user-flow.md`).
+- Start each doc with a one-line purpose statement.
+- Keep docs short and linkable; prefer multiple small files to one large file.
+- Follow any project-specific standards documented in `llm/project/project-rules.md` once created.
 
 ## Testing Guidelines
-Default to Vitest + Testing Library. Name suites to mirror `src/`, such as `tests/dashboard/filters.test.ts`. Target at least 80% branch coverage; run `npm run test -- --coverage` before merges and record deltas in the relevant `llm/project/phases/` doc. Stub Nostr relay traffic in fixtures so tests stay deterministic and fast.
+- No automated tests live in this boilerplate yet.
+- For projects that add tests, document the framework and coverage target in `llm/project/tech-stack.md` and align with the workflow in `llm/workflows/dev-env-local.md`.
+- Use consistent naming like `*.spec.ts` or `*.test.ts` once a framework is chosen.
 
 ## Commit & Pull Request Guidelines
-Write imperative commit subjects ≤60 characters (`Add setup guide`). Keep related changes together and commit documentation alongside code. PRs need a summary, linked issues or docs, verification commands, and screenshots or logs for UX changes. After rebasing, rerun build, lint, and coverage suites; flag any skipped step with rationale.
+- Commit history uses short, descriptive, plain-English messages (no strict conventional-commit format).
+- Prefer imperative mood and scope clarity (e.g., “add project overview example”).
+- Pull requests should include a concise summary, list of doc updates, and any follow-up tasks.
+- If you introduce new workflows or rules, update `llm/README.md` and the relevant file in `llm/project/`.
 
-## Security & Configuration Tips
-Store secrets (API keys, relay credentials) in `.env.local`; never commit them. List required env vars in `README.md`. Validate relay URLs and sanitize note payloads before persistence. Review dependency bumps with `npm audit` prior to shipping.
-
-## Agent & Collaboration Notes
-Review the latest `llm/` docs—especially `llm/project/`—before generating code and capture new decisions immediately. Cross-check open questions in `llm/project/phases/` before acting. When agents change code, update the affected planning doc in the same change set and log follow-up tasks in `llm/project/phases/`. Use `llm/context/` for implementation references you’ll cite during prompts and add/maintain repeatable runbooks in `llm/workflows/`. Ask clarifying questions instead of guessing.
+## Documentation Workflow
+- Start with `llm/project/setup.md` to generate the baseline docs.
+- Copy `llm/project/project-overview-example.md` to `llm/project/project-overview.md` and tailor it.
+- Keep `llm/` as the canonical source of truth; code should follow the docs, not the other way around.

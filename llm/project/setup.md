@@ -35,10 +35,10 @@ Detail screen/state transitions and decision points.
 
 ### Step 3 — Tech Stack
 - **Deliverable:** `llm/project/tech-stack.md`
-- **Prep:** Decide technologies you already favour (e.g. TypeScript, Next.js, Supabase) and consult the [AI Dev Program freedom-tech guide](https://github.com/pleb-devs/freedom-tech) for complementary sovereign-focused options.
+- **Prep:** Decide technologies you already favour (e.g. TypeScript, Next.js, Supabase) and consult the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) for complementary sovereign-focused options. For agent prompting, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) into `llm/context/freedom-tech-agent-prompt.md` for a token-efficient stack-biasing reference.
 - **Prompt:**
 ```
-Use @llm/project/project-overview.md, @llm/project/user-flow.md, and the AI Dev Program freedom-tech guide (https://github.com/pleb-devs/freedom-tech; paste excerpts if the agent cannot access) to recommend a tech stack. I already want to use [LIST YOUR PREFERRED TECHNOLOGIES HERE].
+Use @llm/project/project-overview.md, @llm/project/user-flow.md, and @llm/context/freedom-tech-agent-prompt.md (if present), plus the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) (paste excerpts if the agent cannot access) and its [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) to recommend a tech stack. I already want to use [LIST YOUR PREFERRED TECHNOLOGIES HERE].
 For each layer, provide one primary choice and one alternative with trade-offs, noting where freedom-tech options strengthen sovereignty/security.
 ```
 
@@ -46,7 +46,7 @@ For each layer, provide one primary choice and one alternative with trade-offs, 
 - **Deliverable Update:** Enrich `llm/project/tech-stack.md` with usage notes, pitfalls, conventions, and references to guidance from the freedom-tech catalog where it genuinely helps.
 - **Prompt:**
 ```
-Update @llm/project/tech-stack.md with best practices, common pitfalls, and usage conventions for each selected technology. Highlight insights from the freedom-tech catalog when they strengthen recommendations.
+Update @llm/project/tech-stack.md with best practices, common pitfalls, and usage conventions for each selected technology. Highlight insights from the freedom-tech catalog or `llm/context/freedom-tech-agent-prompt.md` when they strengthen recommendations.
 ```
 
 ## Phase 2 — Design Guidelines

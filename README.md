@@ -17,7 +17,7 @@ new-project-boilerplate provides a systematic methodology for starting projects 
 
 1. **Follow the Setup Guide**: Start with [`llm/project/setup.md`](llm/project/setup.md) for the complete walkthrough
 2. **Define Your Project**: Create a detailed project overview using the example template
-3. **Build Documentation**: Generate user flows, tech stack, design rules, and project conventions; consult the [AI Dev Program freedom-tech guide](https://github.com/pleb-devs/freedom-tech) for relevant sovereign-focused libraries
+3. **Build Documentation**: Generate user flows, tech stack, design rules, and project conventions; consult the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) and, for agent prompting, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) into `llm/context/freedom-tech-agent-prompt.md`
 4. **Plan Development**: Outline iterative development phases from setup to MVP
 5. **Start Building**: Begin development with a solid foundation in place
 
@@ -54,4 +54,4 @@ llm/
 
 ## Getting Started
 
-Begin by following the setup guide in [`llm/project/setup.md`](llm/project/setup.md) to establish your project foundation and development workflow, referencing the [AI Dev Program freedom-tech guide](https://github.com/pleb-devs/freedom-tech) when it surfaces helpful technologies.
+Begin by following the setup guide in [`llm/project/setup.md`](llm/project/setup.md) to establish your project foundation and development workflow. When prompting agents for stack choices, attach `llm/context/freedom-tech-agent-prompt.md` (copied from the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md)) if you want sovereignty-focused suggestions.
