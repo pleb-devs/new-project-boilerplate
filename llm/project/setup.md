@@ -35,18 +35,18 @@ Detail screen/state transitions and decision points.
 
 ### Step 3 — Tech Stack
 - **Deliverable:** `llm/project/tech-stack.md`
-- **Prep:** Decide technologies you already favour (e.g. TypeScript, Next.js, Supabase) and consult the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) for complementary sovereign-focused options. For agent prompting, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) into `llm/context/freedom-tech-agent-prompt.md` for a token-efficient stack-biasing reference.
+- **Prep:** Decide technologies you already favour (e.g. TypeScript, Next.js, Supabase). If you want optional sovereignty-focused suggestions for the tech-stack doc, consult the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech). For agent prompting, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) into `llm/context/freedom-tech-agent-prompt.md` as a suggestion-only reference.
 - **Prompt:**
 ```
-Use @llm/project/project-overview.md, @llm/project/user-flow.md, and @llm/context/freedom-tech-agent-prompt.md (if present), plus the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) (paste excerpts if the agent cannot access) and its [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) to recommend a tech stack. I already want to use [LIST YOUR PREFERRED TECHNOLOGIES HERE].
+Use @llm/project/project-overview.md, @llm/project/user-flow.md, and @llm/context/freedom-tech-agent-prompt.md (if present), plus the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) (paste excerpts if the agent cannot access) and its [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) to recommend a tech stack. Treat freedom-tech inputs as suggestion-only and do not override my stated preferences. I already want to use [LIST YOUR PREFERRED TECHNOLOGIES HERE].
 For each layer, provide one primary choice and one alternative with trade-offs, noting where freedom-tech options strengthen sovereignty/security.
 ```
 
 ### Step 4 — Stack Best Practices
-- **Deliverable Update:** Enrich `llm/project/tech-stack.md` with usage notes, pitfalls, conventions, and references to guidance from the freedom-tech catalog where it genuinely helps.
+- **Deliverable Update:** Enrich `llm/project/tech-stack.md` with usage notes, pitfalls, conventions, and optional suggestions from the freedom-tech catalog where they genuinely help.
 - **Prompt:**
 ```
-Update @llm/project/tech-stack.md with best practices, common pitfalls, and usage conventions for each selected technology. Highlight insights from the freedom-tech catalog or `llm/context/freedom-tech-agent-prompt.md` when they strengthen recommendations.
+Update @llm/project/tech-stack.md with best practices, common pitfalls, and usage conventions for each selected technology. Highlight optional insights from the freedom-tech catalog or `llm/context/freedom-tech-agent-prompt.md` when they strengthen recommendations.
 ```
 
 ## Phase 2 — Design Guidelines
@@ -88,7 +88,7 @@ Using @llm/project/tech-stack.md, @llm/project/user-flow.md, @llm/project/projec
 ## Phase 4 — Delivery Planning
 
 ### Step 8 — Phased Roadmap
-- **Deliverables:** `llm/project/phases/setup-phase.md`, `llm/project/phases/mvp-phase.md`, plus any follow-up phases.
+- **Deliverables:** `llm/project/phases/setup-phase.md`, `llm/project/phases/mvp-phase.md`, plus any follow-up phases (including the optional `llm/project/phases/review-and-hardening-phase.md`).
 - **Prompt:**
 ```
 Create an iterative development plan from setup to MVP to advanced phases.
@@ -96,6 +96,7 @@ Rules:
 - Setup = barebones but running
 - MVP = core value delivered
 - Later phases = enhancements, scale, polish
+- Add an optional final Review & Hardening phase focused on security, privacy, and release readiness
 - Each phase goes in its own document with scope and 3–5 actionable steps per feature
 - Plans must build on the previous phase and remain shippable
 
@@ -103,9 +104,20 @@ Use @llm/project/project-overview.md, @llm/project/user-flow.md, @llm/project/te
 Place the files in `llm/project/phases/`.
 ```
 
-## Phase 5 — Development Enablement
+## Phase 5 — Review & Hardening (Optional)
 
-### Step 9 — Agent Rules
+### Step 9 — Review & Secure Checklist
+- **Deliverable:** `llm/project/phases/review-and-hardening-phase.md`
+- **Prompt:**
+```
+Create a final optional phase focused on review, security hardening, and release readiness.
+Use @llm/project/project-overview.md, @llm/project/tech-stack.md, @llm/project/project-rules.md, and any relevant @llm/implementation/ docs.
+Include entry/exit criteria and 3–5 actionable steps.
+```
+
+## Phase 6 — Development Enablement
+
+### Step 10 — Agent Rules
 - **Deliverable:** Copy into Cursor User Rules, Goosehints hintsets, `AGENTS.md`, `CLAUDE.md`, and any other shared agent-rules handbook.
 - **Why:** Keep every assistant aligned with the engineering expectations.
 - **Paste:**
@@ -133,14 +145,14 @@ Code Style and Structure:
 
 Note: Also see `AGENTS.md` at the repo root, `CLAUDE.md` for Anthropic workflows, and the Goosehints guide (https://block.github.io/goose/docs/guides/using-goosehints/) when syncing assistant rule repositories.
 
-### Step 10 — README Refresh
+### Step 11 — README Refresh
 - **Deliverable:** Updated project README.
 - **Prompt:**
 ```
 Using @llm/project/project-overview.md, @llm/project/user-flow.md, @llm/project/tech-stack.md, and @llm/project/project-rules.md, refresh the README with a concise project summary and key conventions.
 ```
 
-### Step 11 — Documentation Audit
+### Step 12 — Documentation Audit
 Confirm `llm/` contains the full set in the new layout:
 - `llm/project/project-overview.md`
 - `llm/project/user-flow.md`
@@ -149,11 +161,12 @@ Confirm `llm/` contains the full set in the new layout:
 - `llm/project/project-rules.md`
 - `llm/project/phases/setup-phase.md`
 - `llm/project/phases/mvp-phase.md`
+- `llm/project/phases/review-and-hardening-phase.md`
 - `llm/project/phases/[additional-phase].md`
 - `llm/context/[any-supporting-context].md`
 - `llm/workflows/dev-env-local.md`
 
-### Step 12 — Kickoff Prompt
+### Step 13 — Kickoff Prompt
 - **Deliverable:** First development task or pairing session.
 - **Prompt:**
 ```
@@ -180,9 +193,13 @@ llm/
 │   └── phases/
 │       ├── setup-phase.md
 │       ├── mvp-phase.md
+│       ├── review-and-hardening-phase.md
 │       └── [additional-phase].md
 ├── context/
 │   └── [supporting-context].md
+├── implementation/
+│   ├── README.md
+│   └── implementation-note-template.md
 └── workflows/
     └── dev-env-local.md
 ```

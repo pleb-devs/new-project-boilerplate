@@ -17,9 +17,10 @@ new-project-boilerplate provides a systematic methodology for starting projects 
 
 1. **Follow the Setup Guide**: Start with [`llm/project/setup.md`](llm/project/setup.md) for the complete walkthrough
 2. **Define Your Project**: Create a detailed project overview using the example template
-3. **Build Documentation**: Generate user flows, tech stack, design rules, and project conventions; consult the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) and, for agent prompting, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) into `llm/context/freedom-tech-agent-prompt.md`
-4. **Plan Development**: Outline iterative development phases from setup to MVP
-5. **Start Building**: Begin development with a solid foundation in place
+3. **Build Documentation**: Generate user flows, tech stack, design rules, and project conventions
+4. **Plan Development**: Outline iterative development phases from setup to MVP, with an optional review & hardening phase
+5. **Capture Implementation Notes**: Add docs in [`llm/implementation/`](llm/implementation/) using the [template](llm/implementation/implementation-note-template.md)
+6. **Start Building**: Begin development with a solid foundation in place
 
 ## Documentation Structure
 
@@ -37,9 +38,13 @@ llm/
 │   └── phases/                  # Development phase planning
 │       ├── setup-phase.md
 │       ├── mvp-phase.md
+│       ├── review-and-hardening-phase.md
 │       └── [additional-phases].md
 ├── context/                     # Implementation-specific references (e.g., specs)
 │   └── [context-docs].md
+├── implementation/              # Implementation notes about the current build
+│   ├── README.md
+│   └── implementation-note-template.md
 └── workflows/                   # Common runbooks (e.g., local dev, release)
     └── dev-env-local.md
 ```
@@ -54,4 +59,4 @@ llm/
 
 ## Getting Started
 
-Begin by following the setup guide in [`llm/project/setup.md`](llm/project/setup.md) to establish your project foundation and development workflow. When prompting agents for stack choices, attach `llm/context/freedom-tech-agent-prompt.md` (copied from the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md)) if you want sovereignty-focused suggestions.
+Begin by following the setup guide in [`llm/project/setup.md`](llm/project/setup.md) to establish your project foundation and development workflow. When prompting agents for tech-stack suggestions, attach `llm/context/freedom-tech-agent-prompt.md` (copied from the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md)) as suggestion-only input if you want sovereignty-focused options.
