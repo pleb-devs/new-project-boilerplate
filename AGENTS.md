@@ -9,7 +9,7 @@
 - `LICENSE` defines licensing terms.
 
 ## Build, Test, and Development Commands
-This repo is documentation-first; it does not ship runnable code by default. The standard commands you should mirror in downstream projects are documented in `llm/workflows/dev-env-local.md`:
+This repo is documentation-first; it does not ship runnable code by default. The standard commands you should mirror in downstream projects are documented in `llm/workflows/dev-env-local-example.md` (copy and rename it for your stack):
 - `npm install` — install dependencies.
 - `npm run dev` — start the local dev server with hot reload.
 - `npm run lint` — lint (use `-- --fix` to auto-fix).
@@ -24,7 +24,7 @@ This repo is documentation-first; it does not ship runnable code by default. The
 
 ## Testing Guidelines
 - No automated tests live in this boilerplate yet.
-- For projects that add tests, document the framework and coverage target in `llm/project/tech-stack.md` and align with the workflow in `llm/workflows/dev-env-local.md`.
+- For projects that add tests, document the framework and coverage target in `llm/project/tech-stack.md` and align with the workflow in `llm/workflows/dev-env-local-example.md`.
 - Use consistent naming like `*.spec.ts` or `*.test.ts` once a framework is chosen.
 
 ## Commit & Pull Request Guidelines

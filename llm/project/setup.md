@@ -5,13 +5,13 @@ Purpose: Runbook to generate baseline docs using the project/context/workflows l
 Use this runbook to generate the documentation baseline before any coding. Complete each step in order—the outputs cascade into later prompts. All project docs live in `llm/project/`; supporting references go in `llm/context/`; repeatable runbooks go in `llm/workflows/`.
 
 ## Quick Start
-- Prerequisites: Node.js 20+, npm. See `llm/workflows/dev-env-local.md` if you need local setup.
-- Copy the template to begin: `llm/project/project-overview-example.md` → `llm/project/project-overview.md`.
+- Prerequisites: none by default. If you choose a Node/JS stack, start from `llm/workflows/dev-env-local-example.md`; otherwise add a stack-specific workflow.
+- Copy the template to begin: `llm/project/project-overview-example.md` → `llm/project/project-overview.md` (example files end with `-example`).
 - Keep files under 500 lines and start each with a one-line purpose note.
 
 ## Context and Workflows
 - Add focused references in `llm/context/` when you need concise specs or implementation notes you’ll cite during prompts (e.g., `nostr-nip-01.md`).
-- Use `llm/workflows/dev-env-local.md` for repeatable setup; add more runbooks (e.g., release process) as the project grows.
+- Use `llm/workflows/dev-env-local-example.md` as the Node/JS example; copy and rename it for your stack.
 
 ## Phase 1 — Project Foundation
 
@@ -164,7 +164,7 @@ Confirm `llm/` contains the full set in the new layout:
 - `llm/project/phases/review-and-hardening-phase.md`
 - `llm/project/phases/[additional-phase].md`
 - `llm/context/[any-supporting-context].md`
-- `llm/workflows/dev-env-local.md`
+- `llm/workflows/dev-env-local-example.md`
 
 ### Step 13 — Kickoff Prompt
 - **Deliverable:** First development task or pairing session.
@@ -172,7 +172,7 @@ Confirm `llm/` contains the full set in the new layout:
 ```
 Let's get started on our project.
 ```
-- **Attach:** Agent Rules, `llm/project/phases/setup-phase.md`, `llm/project/tech-stack.md`, and `llm/project/project-overview.md` (and `llm/workflows/dev-env-local.md`) to keep the assistant grounded.
+- **Attach:** Agent Rules, `llm/project/phases/setup-phase.md`, `llm/project/tech-stack.md`, and `llm/project/project-overview.md` (and `llm/workflows/dev-env-local-example.md`) to keep the assistant grounded.
 
 ## Tips for Success
 - Iterate on earlier docs as new insights emerge.
@@ -201,5 +201,5 @@ llm/
 │   ├── README.md
 │   └── implementation-note-template.md
 └── workflows/
-    └── dev-env-local.md
+    └── dev-env-local-example.md
 ```

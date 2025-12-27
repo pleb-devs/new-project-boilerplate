@@ -1,8 +1,13 @@
-Purpose: Repeatable workflow to set up and validate a local dev environment.
+Purpose: Example workflow to set up and validate a local dev environment for Node/JS projects.
 
 # Local Dev Environment (Workflow)
 
-Use this workflow whenever a contributor (human or agent) needs to spin up the project locally. Keep it minimal, fast, and cross‑platform.
+Use this workflow whenever a contributor (human or agent) needs to spin up the project locally. Keep it minimal, fast, and cross-platform. If your stack is not Node/JS, clone this workflow into a stack-specific runbook and adjust prerequisites and commands.
+Example files end with `-example`; copy and rename this file to make it project-specific.
+
+## What Belongs In llm/workflows
+- Short runbooks you execute consistently (local lint/build/CI checks before push, db migrations, release steps).
+- One workflow per file; keep each focused and easy to follow.
 
 ## Prerequisites
 - Node.js 20+ (LTS). Verify with `node -v`.

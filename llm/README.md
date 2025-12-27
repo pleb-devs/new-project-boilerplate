@@ -10,7 +10,7 @@ This folder is the source of truth for project planning and repeatable guidance 
 llm/
 ├── README.md                  # You are here — how this workspace works
 ├── project/                   # Canonical project plan and phases
-│   ├── project-overview.md    # Your project definition (create from example)
+│   ├── project-overview.md    # Your project definition (copy from project-overview-example.md)
 │   ├── user-flow.md           # User journeys and states
 │   ├── tech-stack.md          # Technology choices and conventions
 │   ├── design-rules.md        # Visual language, accessibility, components
@@ -25,17 +25,18 @@ llm/
 ├── implementation/            # Notes on what the app currently does and how
 │   └── (e.g.) encryption-and-decryption-implementation.md
 └── workflows/                 # Repeated operational runbooks
-    └── dev-env-local.md       # Default: set up local dev environment
+    └── dev-env-local-example.md # Example: set up local dev environment
 ```
 
 ## Folder Intent
 - `project/` — Everything about the product plan: overview, user flows, tech stack, design rules, engineering standards, and the phased roadmap.
 - `context/` — Tight, implementation-oriented briefs. Examples: a protocol spec summary you’ll cite in prompts (e.g., `nostr-nip-01.md`), a domain model, or a library’s usage patterns.
 - `implementation/` — Documentation about what the app currently does and how it is implemented (e.g., `nostr-queries-implementation.md`).
-- `workflows/` — Common runbooks you’ll reuse across releases (e.g., local dev setup, release process, code signing, incident response).
+- `workflows/` — Runbooks you execute consistently (local lint/build/CI checks before push, db migrations, release steps).
 
 ## Conventions
 - Begin each file with a single-line purpose note; keep files under 500 lines.
+- Example templates end with `-example`; copy and rename them to fit your project.
 - Use descriptive kebab-case filenames. Prefer short, linkable documents over mega files.
 - Update `project/` first; add supporting `context/` docs and `workflows/` as the project evolves.
 
@@ -44,7 +45,7 @@ llm/
 2. Copy `llm/project/project-overview-example.md` to `llm/project/project-overview.md` and tailor it.
 3. Add any relevant specs to `llm/context/` (e.g., `nostr-nip-01.md`).
 4. If you want sovereignty-focused suggestions for the tech-stack doc, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) from the [freedom-tech repo](https://github.com/pleb-devs/freedom-tech) into `llm/context/freedom-tech-agent-prompt.md` and attach it only in stack-selection prompts.
-5. Use `workflows/dev-env-local.md` to get the environment running on a fresh machine.
+5. Use `workflows/dev-env-local-example.md` as a starting point to get the environment running on a fresh machine.
 
 ## Migration Note
 As of 2025-10-22, all prior top-level `llm/*` docs live under `llm/project/`. Update any local references to the new paths.

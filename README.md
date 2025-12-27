@@ -45,9 +45,10 @@ llm/
 ├── implementation/              # Implementation notes about the current build
 │   ├── README.md
 │   └── implementation-note-template.md
-└── workflows/                   # Common runbooks (e.g., local dev, release)
-    └── dev-env-local.md
+└── workflows/                   # Common runbooks (e.g., local lint/build/CI checks, db migrations, release)
+    └── dev-env-local-example.md
 ```
+Example templates end with `-example`; copy and rename them for your project.
 
 ## Why Documentation-First?
 
