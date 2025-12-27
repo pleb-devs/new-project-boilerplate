@@ -86,39 +86,9 @@ Using @llm/project/tech-stack.md, @llm/project/user-flow.md, @llm/project/projec
 - Development workflow expectations
 ```
 
-## Phase 4 — Delivery Planning
+## Phase 4 — Development Enablement
 
-### Step 8 — Phased Roadmap
-- **Deliverables:** `llm/project/phases/setup-phase.md`, `llm/project/phases/mvp-phase.md`, plus any follow-up phases (including the optional `llm/project/phases/review-and-hardening-phase.md`).
-- **Prompt:**
-```
-Create an iterative development plan from setup to MVP to advanced phases.
-Rules:
-- Setup = barebones but running
-- MVP = core value delivered
-- Later phases = enhancements, scale, polish
-- Add an optional final Review & Hardening phase focused on security, privacy, and release readiness
-- Each phase goes in its own document with scope and 3–5 actionable steps per feature
-- Plans must build on the previous phase and remain shippable
-
-Use @llm/project/project-overview.md, @llm/project/user-flow.md, @llm/project/tech-stack.md, and @llm/project/project-rules.md for context.
-Place the files in `llm/project/phases/`.
-```
-
-## Phase 5 — Review & Hardening (Optional)
-
-### Step 9 — Review & Secure Checklist
-- **Deliverable:** `llm/project/phases/review-and-hardening-phase.md`
-- **Prompt:**
-```
-Create a final optional phase focused on review, security hardening, and release readiness.
-Use @llm/project/project-overview.md, @llm/project/tech-stack.md, @llm/project/project-rules.md, and any relevant @llm/implementation/ docs.
-Include entry/exit criteria and 3–5 actionable steps.
-```
-
-## Phase 6 — Development Enablement
-
-### Step 10 — Agent Rules
+### Step 8 — Agent Rules
 - **Deliverable:** Copy into Cursor User Rules, Goosehints hintsets, `AGENTS.md`, `CLAUDE.md`, and any other shared agent-rules handbook.
 - **Why:** Keep every assistant aligned with the engineering expectations.
 - **Paste:**
@@ -146,12 +116,42 @@ Code Style and Structure:
 
 Note: Also see `AGENTS.md` at the repo root, `CLAUDE.md` for Anthropic workflows, and the Goosehints guide (https://block.github.io/goose/docs/guides/using-goosehints/) when syncing assistant rule repositories.
 
-### Step 11 — README Refresh
+### Step 9 — README Refresh
 - **Deliverable:** Updated project README.
 - **Prompt:**
 ```
 Using @llm/project/project-overview.md, @llm/project/user-flow.md, @llm/project/tech-stack.md, and @llm/project/project-rules.md, refresh the README with a concise project summary and key conventions.
 ```
+
+## Phase 5 — Delivery Planning
+
+### Step 10 — Phased Roadmap
+- **Deliverables:** `llm/project/phases/setup-phase.md`, `llm/project/phases/mvp-phase.md`, plus any follow-up phases (including the optional `llm/project/phases/review-and-hardening-phase.md`).
+- **Prompt:**
+```
+Create an iterative development plan from setup to MVP to advanced phases.
+Rules:
+- Setup = barebones but running
+- MVP = core value delivered
+- Later phases = enhancements, scale, polish
+- Add an optional final Review & Hardening phase focused on security, privacy, and release readiness
+- Each phase goes in its own document with scope and 3–5 actionable steps per feature
+- Plans must build on the previous phase and remain shippable
+
+Use @llm/project/project-overview.md, @llm/project/user-flow.md, @llm/project/tech-stack.md, and @llm/project/project-rules.md for context.
+Place the files in `llm/project/phases/`.
+```
+
+### Step 11 — Review & Secure Checklist (Optional)
+- **Deliverable:** `llm/project/phases/review-and-hardening-phase.md`
+- **Prompt:**
+```
+Create a final optional phase focused on review, security hardening, and release readiness.
+Use @llm/project/project-overview.md, @llm/project/tech-stack.md, @llm/project/project-rules.md, and any relevant @llm/implementation/ docs.
+Include entry/exit criteria and 3–5 actionable steps.
+```
+
+## Phase 6 — Wrap-Up
 
 ### Step 12 — Documentation Audit
 Confirm `llm/` contains the full set in the new layout:
