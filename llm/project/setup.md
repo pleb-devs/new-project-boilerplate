@@ -5,9 +5,10 @@ Purpose: Runbook to generate baseline docs using the project/context/workflows l
 Use this runbook to generate the documentation baseline before any coding. Complete each step in order—the outputs cascade into later prompts. All project docs live in `llm/project/`; supporting references go in `llm/context/`; repeatable runbooks go in `llm/workflows/`.
 
 ## Quick Start
-- Prerequisites: none by default. If you choose a Node/JS stack, start from `llm/workflows/dev-env-local-example.md`; otherwise add a stack-specific workflow.
 - Copy the template to begin: `llm/project/project-overview-example.md` → `llm/project/project-overview.md` (example files end with `-example`).
+- Treat `llm/project/project-overview.md` as the most important document; spend the most time here and write it yourself (do not have AI generate it).
 - Keep files under 500 lines and start each with a one-line purpose note.
+- After you choose a stack, copy a workflow from `llm/workflows/` and rename it for your project.
 
 ## Context and Workflows
 - Add focused references in `llm/context/` when you need concise specs or implementation notes you’ll cite during prompts (e.g., `nostr-nip-01.md`).
