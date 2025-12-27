@@ -18,8 +18,8 @@ llm/
 │   └── phases/                # Iterative delivery plans
 │       ├── setup-phase.md
 │       ├── mvp-phase.md
-│       ├── review-and-hardening-phase.md
-│       └── [additional-phase].md
+│       ├── review-and-hardening-phase.md (optional)
+│       └── [additional-phase].md (optional)
 ├── context/                   # Focused, reusable references for implementation
 │   └── (e.g.) nostr-nip-01.md, ui-tokens.md, security-model.md
 ├── implementation/            # Notes on what the app currently does and how

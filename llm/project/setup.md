@@ -126,7 +126,7 @@ Using @llm/project/project-overview.md, @llm/project/user-flow.md, @llm/project/
 ## Phase 5 — Delivery Planning
 
 ### Step 10 — Phased Roadmap
-- **Deliverables:** `llm/project/phases/setup-phase.md`, `llm/project/phases/mvp-phase.md`, plus any follow-up phases (including the optional `llm/project/phases/review-and-hardening-phase.md`).
+- **Deliverables:** `llm/project/phases/setup-phase.md`, `llm/project/phases/mvp-phase.md`, plus any follow-up phases that fit your roadmap.
 - **Prompt:**
 ```
 Create an iterative development plan from setup to MVP to advanced phases.
@@ -134,7 +134,6 @@ Rules:
 - Setup = barebones but running
 - MVP = core value delivered
 - Later phases = enhancements, scale, polish
-- Add an optional final Review & Hardening phase focused on security, privacy, and release readiness
 - Each phase goes in its own document with scope and 3–5 actionable steps per feature
 - Plans must build on the previous phase and remain shippable
 
@@ -162,8 +161,8 @@ Confirm `llm/` contains the full set in the new layout:
 - `llm/project/project-rules.md`
 - `llm/project/phases/setup-phase.md`
 - `llm/project/phases/mvp-phase.md`
-- `llm/project/phases/review-and-hardening-phase.md`
-- `llm/project/phases/[additional-phase].md`
+- `llm/project/phases/review-and-hardening-phase.md` (optional)
+- `llm/project/phases/[additional-phase].md` (optional)
 - `llm/context/[any-supporting-context].md`
 - `llm/workflows/dev-env-local-example.md`
 
@@ -194,8 +193,8 @@ llm/
 │   └── phases/
 │       ├── setup-phase.md
 │       ├── mvp-phase.md
-│       ├── review-and-hardening-phase.md
-│       └── [additional-phase].md
+│       ├── review-and-hardening-phase.md (optional)
+│       └── [additional-phase].md (optional)
 ├── context/
 │   └── [supporting-context].md
 ├── implementation/

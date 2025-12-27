@@ -38,8 +38,8 @@ llm/
 │   └── phases/                  # Development phase planning
 │       ├── setup-phase.md
 │       ├── mvp-phase.md
-│       ├── review-and-hardening-phase.md
-│       └── [additional-phases].md
+│       ├── review-and-hardening-phase.md (optional)
+│       └── [additional-phase].md (optional)
 ├── context/                     # Implementation-specific references (e.g., specs)
 │   └── [context-docs].md
 ├── implementation/              # Implementation notes about the current build
