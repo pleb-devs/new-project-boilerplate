@@ -16,6 +16,8 @@ llm/
 │   ├── design-rules.md        # Visual language, accessibility, components
 │   ├── project-rules.md       # Coding standards and workflows
 │   └── phases/                # Iterative delivery plans
+│       ├── README.md          # How to use phases and templates
+│       ├── phase-template.md  # Scaffold for drafting phases
 │       ├── setup-phase.md
 │       ├── mvp-phase.md
 │       ├── review-and-hardening-phase.md (optional)
@@ -37,6 +39,7 @@ llm/
 ## Conventions
 - Begin each file with a single-line purpose note; keep files under 500 lines.
 - Example templates end with `-example`; copy and rename them to fit your project.
+- Use `llm/project/phases/phase-template.md` to draft phases; update existing phase files in place.
 - Use descriptive kebab-case filenames. Prefer short, linkable documents over mega files.
 - Update `project/` first; add supporting `context/` docs and `workflows/` as the project evolves.
 

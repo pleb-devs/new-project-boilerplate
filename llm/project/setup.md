@@ -136,6 +136,8 @@ Rules:
 - Later phases = enhancements, scale, polish
 - Each phase goes in its own document with scope and 3–5 actionable steps per feature
 - Plans must build on the previous phase and remain shippable
+- For protocol or crypto work: add a spec summary doc in `llm/context/`, write spec-based tests first, and verify the implementation against those tests
+- Use `llm/project/phases/phase-template.md` as a scaffold; update `setup-phase.md` and `mvp-phase.md` rather than creating new names
 
 Use @llm/project/project-overview.md, @llm/project/user-flow.md, @llm/project/tech-stack.md, and @llm/project/project-rules.md for context.
 Place the files in `llm/project/phases/`.
@@ -159,6 +161,8 @@ Confirm `llm/` contains the full set in the new layout:
 - `llm/project/tech-stack.md`
 - `llm/project/design-rules.md`
 - `llm/project/project-rules.md`
+- `llm/project/phases/README.md`
+- `llm/project/phases/phase-template.md`
 - `llm/project/phases/setup-phase.md`
 - `llm/project/phases/mvp-phase.md`
 - `llm/project/phases/review-and-hardening-phase.md` (optional)
@@ -191,6 +195,8 @@ llm/
 │   ├── design-rules.md
 │   ├── project-rules.md
 │   └── phases/
+│       ├── README.md
+│       ├── phase-template.md
 │       ├── setup-phase.md
 │       ├── mvp-phase.md
 │       ├── review-and-hardening-phase.md (optional)

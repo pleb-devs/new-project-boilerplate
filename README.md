@@ -36,6 +36,8 @@ llm/
 │   ├── design-rules.md          # UI principles and styling guidelines
 │   ├── project-rules.md         # Coding standards and file organization
 │   └── phases/                  # Development phase planning
+│       ├── README.md
+│       ├── phase-template.md
 │       ├── setup-phase.md
 │       ├── mvp-phase.md
 │       ├── review-and-hardening-phase.md (optional)
