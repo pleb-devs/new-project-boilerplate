@@ -39,9 +39,9 @@ llm/
 ## Conventions
 - Begin each file with a single-line purpose note; keep files under 500 lines.
 - Example templates end with `-example`; copy and rename them to fit your project.
-- Use `llm/project/phases/phase-template.md` to draft phases; update existing phase files in place.
 - Use descriptive kebab-case filenames. Prefer short, linkable documents over mega files.
-- Update `project/` first; add supporting `context/` docs and `workflows/` as the project evolves.
+- Update `project/` first; add supporting `context/` and `workflows/` as the project evolves.
+- For protocol or crypto work: add a spec summary in `context/`, write spec-based tests first, then implement and verify against those tests.
 
 ## Quick Start
 1. Open `llm/project/setup.md` and follow the steps to generate your baseline docs.
@@ -50,5 +50,3 @@ llm/
 4. If you want sovereignty-focused suggestions for the tech-stack doc, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) from the [freedom-tech repo](https://github.com/pleb-devs/freedom-tech) into `llm/context/freedom-tech-agent-prompt.md` and attach it only in stack-selection prompts.
 5. Use `workflows/dev-env-local-example.md` as a starting point to get the environment running on a fresh machine.
 
-## Migration Note
-As of 2025-10-22, all prior top-level `llm/*` docs live under `llm/project/`. Update any local references to the new paths.

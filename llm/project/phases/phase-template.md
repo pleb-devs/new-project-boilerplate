@@ -4,7 +4,7 @@ Purpose: Template for drafting any project phase, including spec-first and test-
 
 Use this file as a scaffold when drafting a new phase. Replace placeholders and keep the plan specific, shippable, and short.
 
-## Intent
+## Goals
 - [One sentence on what this phase delivers and why it matters.]
 
 ## Inputs

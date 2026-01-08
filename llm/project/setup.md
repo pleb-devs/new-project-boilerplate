@@ -5,14 +5,13 @@ Purpose: Runbook to generate baseline docs using the project/context/workflows l
 Use this runbook to generate the documentation baseline before any coding. Complete each step in order—the outputs cascade into later prompts. All project docs live in `llm/project/`; supporting references go in `llm/context/`; repeatable runbooks go in `llm/workflows/`.
 
 ## Quick Start
-- Copy the template to begin: `llm/project/project-overview-example.md` → `llm/project/project-overview.md` (example files end with `-example`).
-- Treat `llm/project/project-overview.md` as the most important document; spend the most time here and write it yourself (do not have AI generate it).
-- Keep files under 500 lines and start each with a one-line purpose note.
-- After you choose a stack, copy a workflow from `llm/workflows/` and rename it for your project.
+- Copy `llm/project/project-overview-example.md` → `llm/project/project-overview.md` and tailor it.
+- Treat the project overview as the most important document; write it yourself (do not have AI generate it).
+- See `llm/README.md` for conventions (file limits, naming, example templates).
 
 ## Context and Workflows
-- Add focused references in `llm/context/` when you need concise specs or implementation notes you’ll cite during prompts (e.g., `nostr-nip-01.md`).
-- Use `llm/workflows/dev-env-local-example.md` as the Node/JS example; copy and rename it for your stack.
+- Add focused references in `llm/context/` for specs or implementation notes you'll cite in prompts.
+- Copy and rename `llm/workflows/dev-env-local-example.md` for your stack.
 
 ## Phase 1 — Project Foundation
 
@@ -36,18 +35,21 @@ Detail screen/state transitions and decision points.
 
 ### Step 3 — Tech Stack
 - **Deliverable:** `llm/project/tech-stack.md`
-- **Prep:** Decide technologies you already favour (e.g. TypeScript, Next.js, Supabase). If you want optional sovereignty-focused suggestions for the tech-stack doc, consult the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech). For agent prompting, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) into `llm/context/freedom-tech-agent-prompt.md` as a suggestion-only reference.
+- **Prep:** Decide technologies you already favour (e.g., TypeScript, Next.js, Supabase).
+- **Optional:** For sovereignty-focused suggestions, copy the [freedom-tech `agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) into `llm/context/freedom-tech-agent-prompt.md`.
 - **Prompt:**
 ```
-Use @llm/project/project-overview.md, @llm/project/user-flow.md, and @llm/context/freedom-tech-agent-prompt.md (if present), plus the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) (paste excerpts if the agent cannot access) and its [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) to recommend a tech stack. Treat freedom-tech inputs as suggestion-only and do not override my stated preferences. I already want to use [LIST YOUR PREFERRED TECHNOLOGIES HERE].
-For each layer, provide one primary choice and one alternative with trade-offs, noting where freedom-tech options strengthen sovereignty/security.
+Using @llm/project/project-overview.md and @llm/project/user-flow.md, recommend a tech stack.
+I already want to use [LIST YOUR PREFERRED TECHNOLOGIES HERE].
+For each layer, provide one primary choice and one alternative with trade-offs.
+Optional: also reference @llm/context/freedom-tech-agent-prompt.md for sovereignty-focused suggestions.
 ```
 
 ### Step 4 — Stack Best Practices
-- **Deliverable Update:** Enrich `llm/project/tech-stack.md` with usage notes, pitfalls, conventions, and optional suggestions from the freedom-tech catalog where they genuinely help.
+- **Deliverable:** Update `llm/project/tech-stack.md` with usage notes, pitfalls, and conventions.
 - **Prompt:**
 ```
-Update @llm/project/tech-stack.md with best practices, common pitfalls, and usage conventions for each selected technology. Highlight optional insights from the freedom-tech catalog or `llm/context/freedom-tech-agent-prompt.md` when they strengthen recommendations.
+Update @llm/project/tech-stack.md with best practices, common pitfalls, and usage conventions for each selected technology.
 ```
 
 ## Phase 2 — Design Guidelines
@@ -89,12 +91,12 @@ Using @llm/project/tech-stack.md, @llm/project/user-flow.md, @llm/project/projec
 ## Phase 4 — Development Enablement
 
 ### Step 8 — Agent Rules
-- **Deliverable:** Copy into Cursor User Rules, Goosehints hintsets, `AGENTS.md`, `CLAUDE.md`, and any other shared agent-rules handbook.
+- **Deliverable:** Copy into Cursor User Rules, Goosehints hintsets, `AGENTS.md`, and any other shared agent-rules handbook.
 - **Why:** Keep every assistant aligned with the engineering expectations.
 - **Paste:**
 ```
-You are an expert in TypeScript, Node.js, NextJS + App Router, React, Shadcn, Radix UI, and Tailwind CSS.
-You have extensive experience building production-grade applications for large companies.
+You are an expert in [YOUR CHOSEN TECHNOLOGIES FROM STEP 3].
+You have extensive experience building production-grade applications.
 You specialize in clean, scalable architectures for complex codebases.
 Never assume the user is correct; probe for clarity.
 Always review existing files before generating new ones.
@@ -114,7 +116,7 @@ Code Style and Structure:
 - Keep conditionals lean; avoid redundant braces.
 ```
 
-Note: Also see `AGENTS.md` at the repo root, `CLAUDE.md` for Anthropic workflows, and the Goosehints guide (https://block.github.io/goose/docs/guides/using-goosehints/) when syncing assistant rule repositories.
+Note: Also see `AGENTS.md` at the repo root and the Goosehints guide (https://block.github.io/goose/docs/guides/using-goosehints/) when syncing assistant rule repositories.
 
 ### Step 9 — README Refresh
 - **Deliverable:** Updated project README.

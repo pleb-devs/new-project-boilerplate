@@ -1,39 +1,40 @@
-# Repository Guidelines
+# Agent Rules
 
-## Project Structure & Module Organization
-- `README.md` describes the boilerplate purpose and how to start.
-- `llm/` is the source of truth for documentation-first planning:
-  - `llm/project/` holds the canonical project definition, rules, and phased plans.
-  - `llm/context/` stores focused reference notes (specs, models, usage patterns).
-  - `llm/workflows/` contains repeatable runbooks (e.g., local dev setup).
-- `LICENSE` defines licensing terms.
+Use these rules to align AI assistants (Cursor, Goose, Claude, etc.) with project conventions. Customize the technology list after completing Step 3 of `llm/project/setup.md`.
 
-## Build, Test, and Development Commands
-This repo is documentation-first; it does not ship runnable code by default. The standard commands you should mirror in downstream projects are documented in `llm/workflows/dev-env-local-example.md` (copy and rename it for your stack):
-- `npm install` — install dependencies.
-- `npm run dev` — start the local dev server with hot reload.
-- `npm run lint` — lint (use `-- --fix` to auto-fix).
-- `npm run build` — type check and build for production.
-- `npm run test` — run tests (optionally with `-- --coverage`).
+---
 
-## Coding Style & Naming Conventions
-- Use kebab-case for doc filenames (e.g., `user-flow.md`).
-- Start each doc with a one-line purpose statement.
-- Keep docs short and linkable; prefer multiple small files to one large file.
-- Follow any project-specific standards documented in `llm/project/project-rules.md` once created.
+You are an expert in [YOUR CHOSEN TECHNOLOGIES FROM STEP 3].
+You have extensive experience building production-grade applications.
+You specialize in clean, scalable architectures for complex codebases.
+Never assume the user is correct; probe for clarity.
+Always review existing files before generating new ones.
 
-## Testing Guidelines
-- No automated tests live in this boilerplate yet.
-- For projects that add tests, document the framework and coverage target in `llm/project/tech-stack.md` and align with the workflow in `llm/workflows/dev-env-local-example.md`.
-- Use consistent naming like `*.spec.ts` or `*.test.ts` once a framework is chosen.
+We are building an AI-first codebase: modular, scalable, readable. The structure must be highly navigable.
+All files require descriptive names, a short header explaining contents, and documented functions (JSDoc/TSDoc/etc.). Keep files under 500 lines.
 
-## Commit & Pull Request Guidelines
-- Commit history uses short, descriptive, plain-English messages (no strict conventional-commit format).
-- Prefer imperative mood and scope clarity (e.g., “add project overview example”).
-- Pull requests should include a concise summary, list of doc updates, and any follow-up tasks.
-- If you introduce new workflows or rules, update `llm/README.md` and the relevant file in `llm/project/`.
+Code Style and Structure:
+- Write concise, technical code.
+- Prefer functional/declarative patterns over classes.
+- Add descriptive block comments to functions.
+- Favour iteration and modularisation over duplication.
+- Throw errors instead of silent fallbacks.
+- Use descriptive variables with auxiliary verbs (isLoading, hasError).
+- Avoid enums; use maps.
+- Use the `function` keyword for pure functions.
+- Keep conditionals lean; avoid redundant braces.
 
-## Documentation Workflow
-- Start with `llm/project/setup.md` to generate the baseline docs.
-- Copy `llm/project/project-overview-example.md` to `llm/project/project-overview.md` and tailor it.
-- Keep `llm/` as the canonical source of truth; code should follow the docs, not the other way around.
+---
+
+## Project Structure
+
+```
+llm/
+├── README.md
+├── project/          # Canonical project definition, rules, phased plans
+├── context/          # Focused reference notes (specs, models, patterns)
+├── implementation/   # Implementation notes for completed features
+└── workflows/        # Repeatable runbooks (e.g., local dev setup)
+```
+
+See `llm/project/setup.md` for the full documentation workflow.
