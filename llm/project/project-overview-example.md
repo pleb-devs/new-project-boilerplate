@@ -61,4 +61,3 @@ Representative personas: Sarah (privacy advocate), Marcus (protocol developer), 
 - **Phase 2:** Private notes stay unreadable to relays; backup instructions proven usable
 - **Phase 3:** Targeted sharing works end-to-end, including notifications and exports
 - **Overall:** Positive UX feedback across devices plus clear documentation for onboarding
-
