@@ -28,7 +28,7 @@ Deliver a zero-knowledge pastebin where users encrypt content locally and publis
 ## Delivery Roadmap
 
 ### Phase 1 — Foundations
-- Scaffold Next.js app with TypeScript and Tailwind
+- Scaffold Vite + React app with TypeScript and Tailwind
 - Implement crypto primitives: key generation, XChaCha20-Poly1305 encrypt/decrypt
 - Build minimal UI: textarea input, "Create" button, link display
 - Local-only testing (no relay integration yet)
@@ -48,7 +48,7 @@ Deliver a zero-knowledge pastebin where users encrypt content locally and publis
 - Documentation and smoke tests
 
 ## Architecture & Stack
-- **Frontend:** Next.js (App Router) + TypeScript + Tailwind CSS
+- **Frontend:** Vite + React with TypeScript + Tailwind CSS
 - **Crypto:** tweetnacl or libsodium.js for XChaCha20-Poly1305
 - **Nostr:** nostr-tools for event creation and relay queries
 - **Storage:** None server-side; optional IndexedDB for recent links cache
