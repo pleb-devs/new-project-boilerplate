@@ -10,6 +10,7 @@ This folder is the source of truth for project planning and repeatable guidance 
 llm/
 ├── README.md                  # You are here — how this workspace works
 ├── project/                   # Canonical project plan and phases
+│   ├── setup.md               # Start here — complete setup walkthrough
 │   ├── project-overview.md    # Your project definition (copy from project-overview-example.md)
 │   ├── user-flow.md           # User journeys and states
 │   ├── tech-stack.md          # Technology choices and conventions
@@ -43,9 +44,6 @@ llm/
 - Update `project/` first; add supporting `context/` and `workflows/` as the project evolves.
 - For protocol or crypto work: add a spec summary in `context/`, write spec-based tests first, then implement and verify against those tests.
 
-## Quick Start
-1. Open `llm/project/setup.md` and follow the steps to generate your baseline docs.
-2. Copy `llm/project/project-overview-example.md` to `llm/project/project-overview.md` and tailor it.
-3. Add any relevant specs to `llm/context/` (e.g., `nostr-nip-01.md`).
-4. If you want sovereignty-focused suggestions for the tech-stack doc, copy [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md) from the [freedom-tech repo](https://github.com/pleb-devs/freedom-tech) into `llm/context/freedom-tech-agent-prompt.md` and attach it only in stack-selection prompts.
-5. Use `workflows/dev-env-local-example.md` as a starting point to get the environment running on a fresh machine.
+## Getting Started
+
+Start with [`project/setup.md`](project/setup.md) for the complete walkthrough.
