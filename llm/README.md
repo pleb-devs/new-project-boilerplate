@@ -10,6 +10,7 @@ This folder is the source of truth for project planning and repeatable guidance 
 llm/
 ├── README.md                  # You are here — how this workspace works
 ├── project/                   # Canonical project plan and phases
+│   ├── setup.md               # Start here — complete setup walkthrough
 │   ├── project-overview.md    # Your project definition (copy from project-overview-example.md)
 │   ├── user-flow.md           # User journeys and states
 │   ├── tech-stack.md          # Technology choices and conventions
