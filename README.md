@@ -52,14 +52,6 @@ llm/
 ```
 Example templates end with `-example`; copy and rename them for your project.
 
-## Why Documentation-First?
-
-- **Clarity**: Clear project vision before implementation
-- **Consistency**: Established patterns and conventions
-- **Collaboration**: Better AI assistance and team alignment
-- **Scalability**: Modular, maintainable codebase from day one
-- **Efficiency**: Reduced decision fatigue during development
-
 ## Getting Started
 
 Begin by following the setup guide in [`llm/project/setup.md`](llm/project/setup.md) to establish your project foundation and development workflow. When prompting agents for tech-stack suggestions, attach `llm/context/freedom-tech-agent-prompt.md` (copied from the [AI Dev Program freedom-tech repo](https://github.com/pleb-devs/freedom-tech) [`agent-prompt.md`](https://github.com/pleb-devs/freedom-tech/blob/main/agent-prompt.md)) as suggestion-only input if you want sovereignty-focused options.
