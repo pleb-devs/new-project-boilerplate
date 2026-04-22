@@ -1,5 +1,5 @@
 # new-project-boilerplate
-Boilerplate prompts, documentation, and process for building LLM driven applications.
+Boilerplate prompts, documentation, and process for building LLM-driven applications.
 
 ## What is new-project-boilerplate?
 
